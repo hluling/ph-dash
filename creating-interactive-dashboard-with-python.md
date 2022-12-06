@@ -1,15 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.1
-  kernelspec:
-    display_name: Python 3
-    name: python3
----
 # Creating a Dashboard for Interactive Data Visualization with Dash in Python
 ## Contents
   * [Introduction](#introduction)
@@ -36,12 +24,12 @@ jupyter:
 
 ## Introduction
 
-To advance open scholarship in humanities, it is important to make the research output more accessible to other scholars and the general public. It would be beneficial for scholars to explore ways to better engage with a broader audience. Creating a web-based interactive dashboard to visualize data has become a popular method nowadays to achieve this goal. The current lesson will walk you through the process of creating an interactive dashboard using the latest data from a publicly available dataset using the Dash library in Python. For demonstration, this lesson uses a research question in the field of media studies: How do the U.S. television stations cover the war in Ukraine. The dataset used in this lesson is a publicly available data of transcription texts of television news.
+To advance open scholarship in humanities, it is important to make the research output more accessible to other scholars and the general public. It would be beneficial for scholars to explore ways to better engage with a broader audience. Creating a web-based interactive dashboard to visualize data and results has become a popular method nowadays to achieve this goal (e.g., [a project that tracks social media data](https://portal.research.lu.se/en/publications/stancexplore-visualization-for-the-interactive-exploration-of-sta), [a study that recreates W. E. B. Du Bois' study of black residents in Philadelphia](http://digitalhumanities.org/dhq/vol/16/2/000609/000609.html), and [a project that visualizes the narrative structure in William Faulkner's work](http://digitalhumanities.org/dhq/vol/15/2/000548/000548.html)). The current lesson will walk you through the process of creating an interactive dashboard based on a publicly available dataset using the open-source Dash library in Python. For demonstration, this lesson uses a research question in the field of media studies: How do the U.S. television stations cover the war in Ukraine? The dataset used in this lesson is the publicly available data of transcription texts of television news.
 
-This lesson contributes to the existing Programming Historian lessons by adding a tutorial focused on creating an interactive web-based dashboard in Python ([see a similar English lesson focused on using Shiny in R](https://programminghistorian.org/en/lessons/shiny-leaflet-newspaper-map-tutorial)).
+This lesson contributes to the existing Programming Historian lessons by adding a tutorial focused on creating an interactive web-based dashboard in Python ([see a similar English lesson focused on using Shiny in R](https://programminghistorian.org/en/lessons/shiny-leaflet-newspaper-map-tutorial)). In addition, the approach taken by this lesson can be applied to a wide range of digital humanities projects where there is a need to retrieve data from a publicly available source, process and analyze the data, and visualize the research outputs in an engaging way.
 
 ## Lesson Goals
-You will learn how to:
+You will learn how to use Python to:
   * Retrieve latest data using [Application Programming Interface (API)](https://en.wikipedia.org/wiki/API)
   * Create the frontend of dashboard that determines how it looks
   * Create the backend of dashboard that determines how users interact with it
@@ -54,6 +42,9 @@ The research question in this lesson is whether the U.S. television stations hav
 
 ## Dataset
 To answer the research question, this lesson uses a free and open dataset from the Internet Archive's [Television Explorer](https://blog.archive.org/2016/12/20/new-research-tool-for-visualizing-two-million-hours-of-television-news/). This dataset tracks how much airtime of news coverage television stations include certain keywords at the resolution of 15 seconds. The keyword searches are based on the text of closed captioning. The tool that will be used to retrieve the data is the [2.0 TV API](https://blog.gdeltproject.org/gdelt-2-0-television-api-debuts/) made available by the Global Database of Events, Language and Tone (GDELT).
+
+## Why Dash in Python?
+Several alternative tools to create interacitve dashboards are well discussed in [this lesson on Shiny in R](https://programminghistorian.org/en/lessons/shiny-leaflet-newspaper-map-tutorial) [^1].
 
 ## Prepare for the Lesson
 
@@ -302,3 +293,5 @@ The last step is to "Create Web Service" and wait for several minutes for the ap
 
 ## Conclusion
 Interactive visualization contributes to digital humanities by making the research output more accessible to the public. In this lesson, the key steps of creating and deploying an interacitve dashboard using an open-source tool, `Dash for Python`, are demonstrated with an example in media studies. Like [Shiny in R](https://doi.org/10.46430/phen0105), this is an approach that can be applied in a wide range of applications.
+
+[^1]: dd
