@@ -4,10 +4,9 @@ import pandas as pd
 from io import StringIO
 from datetime import date
 import dash
-#from jupyter_dash import JupyterDash
 from dash import dcc
 from dash import html
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
 
@@ -19,7 +18,7 @@ def to_df(queryurl):
 
 today = date.today()
 today_str = today.strftime("%Y%m%d")
-start_day = today - datetime.timedelta(60)
+start_day = today - datetime.timedelta(365)
 start_day_str = start_day.strftime("%Y%m%d")
 
 query_url_ukr = f"https://api.gdeltproject.org/api/v2/tv/tv?query=(ukraine%20OR%20ukrainian%20OR%20zelenskyy%20OR%20zelensky%20OR%20kiev)%20market:%22National%22&mode=timelinevol&format=html&datanorm=perc&format=csv&timelinesmooth=5&datacomb=sep&timezoom=yes&STARTDATETIME={start_day_str}120000&ENDDATETIME={today_str}120000"
