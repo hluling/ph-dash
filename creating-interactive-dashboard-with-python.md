@@ -306,7 +306,7 @@ Second, scroll down and expand the "Advanced" settings. Click "Add Environment V
 The last step is to "Create Web Service" and wait for several minutes for the application to be built. When finished, you can see your dashboard via a URL like this: https://ph-dash-demo.onrender.com/
 
 ## Conclusion
-Interactive visualization contributes to digital humanities by making the research output more accessible to the public. In this lesson, the key steps of creating and deploying an interacitve dashboard using an open-source tool, Dash in Python, are demonstrated with an example in media studies. Like [Shiny in R](https://doi.org/10.46430/phen0105), this is an approach that can be applied in a wide range of applications.
+Interactive visualization contributes to digital humanities by making the research output more accessible to the public. In this lesson, the key steps of creating and deploying an interacitve dashboard using an open-source tool, Dash in Python, are demonstrated with an example in media studies. Like [Shiny in R](https://doi.org/10.46430/phen0105), this is an approach that can be applied in a wide range of applications in digital humanities.
 
 [^1]: An additional option is [ArcGIS](https://www.arcgis.com/index.html).
 
