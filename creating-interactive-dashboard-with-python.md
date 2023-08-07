@@ -303,7 +303,7 @@ Code explanation: Now you can add the above line to actually see and test the cr
 You need to put all the code you have written so far into a single `.py` file and name it such as `app.py`. The complete code [is provided here](https://github.com/hluling/ph-dash/blob/master/app.py) for convenience. In command line, execute `$python app.py`. Then, a server address will appear, and you will need to copy and paste this address into a web browser to launch the dashboard. In Jupyter Notebook, you can also choose to review the dashboard as a cell output (again, please refer to [the notebook version of the code](https://github.com/hluling/ph-dash/blob/master/ph_dash_dev.ipynb)). 
 
 #### Deploying the Dashboard
-After the dashboard code is ready, in most cases, it is desirable to share your dashboards with the public using a URL. This means that you need to deploy your dashboard as a web application. In this section, you will achieve this goal by using a free service that allows us to host a dynamic web application: the free-tier web service provided by [Render](https://render.com/docs/web-services). In Render's free plan, the [RAM](https://en.wikipedia.org/wiki/Random-access_memory) limit is 512 MB at the time of writing. Our demo app takes about 90 MB, so the allocated RAM should be sufficient.[^2]
+After the dashboard code is ready, in most cases, it is desirable to share your dashboards with the public using a URL. This means that you need to deploy your dashboard as a web application. In this section, you will achieve this goal by using a free service that allows us to host a dynamic web application: the free-tier web service provided by [Render](https://render.com/docs/web-services). In Render's free plan, the [RAM](https://en.wikipedia.org/wiki/Random-access_memory) limit is 512 MB at the time of writing. Our demo app takes about 90 MB, so the allocated RAM should be sufficient.[^7]
 
 ##### Setting up in GitHub
 You will need to upload the code folder, `ph-dash`, as a repository onto GitHub. This can be done in command line or in GitHub Desktop (see [this lesson if you are new to Git or GitHub](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages#github--github-pages-)).
@@ -346,11 +346,9 @@ Interactive visualization contributes to digital humanities by facilitating know
 
 [^5]: K. Viswanath and Pamela Arora, “Ethnic Media in the United States: An Essay on Their Role in Integration, Assimilation, and Social Control,” *Mass Communication and Society* 3, no. 1 (February 2000): 39–56, https://doi.org/10.1207/s15327825mcs0301_03.
 
+[^6]: An additional option is [ArcGIS](https://www.arcgis.com/index.html).
 
-
-[^1]: An additional option is [ArcGIS](https://www.arcgis.com/index.html).
-
-[^2]: If you need more computing power and greater RAM, especially for a heavily used web application that is based on a large dataset, you may need to pay Render a certain fee. At the time of writing, other options that can be used to host dynamic web applications (instead of static sites) include [PythonAnywhere](https://www.pythonanywhere.com/), [Dash Enterprise](https://dash.plotly.com/dash-enterprise), [Heroku](https://devcenter.heroku.com/), [Amazon Web Services](https://aws.amazon.com/), and [Google App Engine](https://cloud.google.com/appengine). If you want to host your own server,or you have someone at your institution who can help you set up a dedicated server, the general approach to take is to find ways to deploy Flask apps (e.g., via [Apache2](https://ubuntu.com/server/docs/web-servers-apache)).
+[^7]: If you need more computing power and greater RAM, especially for a heavily used web application that is based on a large dataset, you may need to pay Render a certain fee. At the time of writing, other options that can be used to host dynamic web applications (instead of static sites) include [PythonAnywhere](https://www.pythonanywhere.com/), [Dash Enterprise](https://dash.plotly.com/dash-enterprise), [Heroku](https://devcenter.heroku.com/), [Amazon Web Services](https://aws.amazon.com/), and [Google App Engine](https://cloud.google.com/appengine). If you want to host your own server,or you have someone at your institution who can help you set up a dedicated server, the general approach to take is to find ways to deploy Flask apps (e.g., via [Apache2](https://ubuntu.com/server/docs/web-servers-apache)).
 
 ## Bibliography
 
