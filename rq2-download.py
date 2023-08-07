@@ -141,4 +141,4 @@ if __name__ == '__main__':
                     data_dict[y].update(title_dict)
 
     lang_asrow = pd.DataFrame.from_dict(data_dict, orient='index').T
-    lang_asrow.to_csv("data_lang_asrow_test.csv", encoding="utf-8")
+    lang_asrow.to_csv("data/data_lang_asrow_test.csv", encoding="utf-8")
