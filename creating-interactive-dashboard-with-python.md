@@ -100,9 +100,9 @@ To address the research question, we can envision a dashboard where there are tw
 
 ## Coding the Dashboards
 
-I will walk you through the major steps in coding for RQ1. Below, the code will be shown in blocks, and an explanation will be provided under each block. If you want to execute the code blocks as you follow along, I have provided [the Jupyter Notebook version of the code here](https://github.com/hluling/ph-dash/blob/master/ph_dash_dev.ipynb).
+I will walk you through the major steps in coding for RQ1. Below, the code will be shown in blocks, and an explanation will be provided under each block. If you want to execute the code blocks as you follow along, I have provided [the Jupyter Notebook version of the code here](https://github.com/hluling/ph-dash/blob/master/ph-dash-notebook.ipynb).
 
-For RQ2, due to the restriction of the API, I will have two separate scripts: one for downloading data, and one for the dashboard. Also, because the coding logic is highly similar to RQ1, I will provide the complete code, but will not give a too-detailed explanation considering the space limit. 
+For RQ2, due to the restriction of the API, I will have two separate scripts: one for downloading data, and one for the dashboard. You can clone [the repository of this lesson](https://github.com/hluling/ph-dash.git) to your machine and run the scripts. Also, because the coding logic is highly similar to RQ1, I will provide the complete code but will not give a detailed explanation considering the space limit. 
 
 ### RQ1
 
