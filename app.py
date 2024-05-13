@@ -96,7 +96,7 @@ def update_output(start_date, end_date):
     
     # create line graphs based on filtered dataframes
     line_fig_ukr = px.line(df_ukr_filtered, x="date_col", y="Value", 
-                     color='Series', title="Coverage of Ukranian Keywords")
+                     color='Series', title="Coverage of Ukrainian Keywords")
     line_fig_rus = px.line(df_rus_filtered, x='date_col', y='Value', 
                      color='Series', title="Coverage of Russian Keywords")
 
