@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+This script creates the RQ2 dashboard in the Programming Historian Lesson - "Creating a Dashboard for Interactive Data Visualization with Dash in Python."
+"""
+
 import pandas as pd
 import dash
 from dash import dcc
@@ -5,6 +12,11 @@ from dash import html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
+
+# Define a function to conditionally format the text
+# Don't show percentages on pie chart under 4%
+def format_text(pct):
+    return f'{pct:.1f}%' if pct >= 4 else ''
 
 lang_asrow = pd.read_csv("data/data_lang_asrow.csv", encoding="utf-8", index_col=[0])
 lang_asrow_noeng = lang_asrow.drop(['English'])
@@ -58,8 +70,26 @@ def generate_chart(year_left, year_right):
 
     df_left = df_left.rename(columns={"index": "Language", year_left: "Count"})
 
+    #df_left.head()
     fig_left = px.pie(df_left, values="Count", names="Language", hole=.6,
-                color_discrete_sequence=px.colors.sequential.RdBu)
+                color_discrete_sequence=px.colors.sequential.RdBu,
+                )
+    
+    fig_left.update_layout(
+        width=700,  
+        height=700,
+        legend=dict(font=dict(size=20),
+                    x=1.4,  
+                    y=0.5,  
+                    xanchor='left',  
+                    yanchor='middle'))
+    
+    fig_left.update_traces(
+    textinfo='percent',
+    texttemplate=[format_text(pct) for pct in df_left['Count'] / df_left['Count'].sum() * 100],
+    hovertemplate='%{label}<br>%{percent:.1%}<extra></extra>',
+    textfont=dict(size=20)
+    )
     
     df_right = lang_asrow_noeng[year_right].sort_values(ascending = False).reset_index().head(10)
     
@@ -69,6 +99,23 @@ def generate_chart(year_left, year_right):
     
     fig_right = px.pie(df_right, values="Count", names="Language", hole=.6,
                 color_discrete_sequence=px.colors.sequential.RdBu)
+    
+    fig_right.update_layout(
+        width=700,  
+        height=700,
+        legend=dict(font=dict(size=20),
+                    x=1.4,  
+                    y=0.5,  
+                    xanchor='left',
+                    yanchor='middle'))
+    
+    fig_right.update_traces(
+    textinfo='percent',
+    texttemplate=[format_text(pct) for pct in df_right['Count'] / df_right['Count'].sum() * 100],
+    textfont=dict(size=20),
+    hovertemplate='%{label}<br>%{percent:.1%}<extra></extra>',
+    )
+
     return fig_left, fig_right
 
 if __name__ == '__main__':
