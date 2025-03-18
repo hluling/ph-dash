@@ -119,4 +119,4 @@ def update_output(start_date, end_date):
     return line_fig_ukr, line_fig_rus
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8051)
+    app.run(debug=True)
