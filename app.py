@@ -1,8 +1,8 @@
-import datetime
+#import datetime
 import requests
 import pandas as pd
 from io import StringIO
-from datetime import date
+#from datetime import date
 import dash
 #from jupyter_dash import JupyterDash
 from dash import dcc
@@ -119,4 +119,4 @@ def update_output(start_date, end_date):
     return line_fig_ukr, line_fig_rus
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True, port=8051)
