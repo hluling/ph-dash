@@ -119,4 +119,4 @@ def generate_chart(year_left, year_right):
     return fig_left, fig_right
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
